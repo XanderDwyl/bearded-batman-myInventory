@@ -1,0 +1,79 @@
+		<div id="footer">
+	      	<div class="copyright">
+	      		<div class="container">
+					<div class="row-fluid">
+						<div class="span12">
+							<div class="row-fluid">
+								<div class="span7 credit">						
+									<p>
+										<span class="agree">2013 &copy; Alexjander Bacalso.</span>
+										<span class="agree">ALL Rights Reserved.</span>
+										<a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+									</p>
+								</div>
+								<div class="span3 pull-right">	
+									<ul class="social-icons pull-right" id="social_footer">
+										<li><a href="#" data-original-title="Feed" class="social_rss"></a></li>
+										<li><a href="#" data-original-title="Facebook" class="social_facebook"></a></li>
+										<li><a href="#" data-original-title="Twitter" class="social_twitter"></a></li>
+										<li><a href="#" data-original-title="Goole Plus" class="social_googleplus"></a></li>
+										<li><a href="#" data-original-title="Linkedin" class="social_linkedin"></a></li>
+									</ul>
+								</div>
+							</div>			
+						</div>			
+					</div>
+				</div>
+	      	</div>
+	    </div>
+
+		<!-- JS Global Compulsory -->
+		<script type="text/javascript" src="/javascripts/template/modernizr.custom.js"></script>        
+		<script type="text/javascript" src="/javascripts/bootstrap.min.js"></script> 
+		<script type="text/javascript" src="/javascripts/bootstrap-datepicker.js"></script> 
+		<script type="text/javascript" src="/javascripts/bootstrap-popover.js"></script> 
+		<!-- JS Implementing Plugins -->           
+		<script type="text/javascript" src="/javascripts/template/backToTop.js"></script>
+		<!-- JS Page Level -->           
+		<script type="text/javascript" src="/javascripts/template/app.js"></script>
+		<script type="text/javascript">
+		    jQuery(document).ready(function() {
+		    	$('#medItem').dataTable();
+		    	$('#medInventory').dataTable();
+
+		    	var today = new Date();
+		    	var y = today.getFullYear()-18,
+					m = today.getMonth(),					 
+					d = today.getDate(),
+				defaultDate = new Date(y, m, d); 
+
+		        App.init();
+		        $('#dp3').datepicker();
+		        $('#dp3').datepicker({ dateFormat: 'mm-dd-yyyy' });
+		        $('#dp3').datepicker('setDate', defaultDate);
+
+		        window.setTimeout(function() {
+				    $(".alert-message").fadeTo(500, 0).fadeToggle(500, function(){
+				        $(this).remove(); 
+				    });
+				}, 5000);
+
+				$("#itemName").change(function () {
+					var str = "";
+					$("select#itemName option:selected").each(function () {
+					str += $(this).text() + " ";
+					});
+					
+					$("#medInventory_filter > label > input").val(str);
+					
+					$('#medInventory').dataTable().fnFilter( str, null, 1,1)
+				}).trigger('change');
+		    });
+		</script>
+		<!--[if lt IE 9]>
+		    <script src="/javascripts/template/respond.js"></script>
+		<![endif]-->
+	
+		
+	</body>
+</html>

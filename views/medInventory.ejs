@@ -1,0 +1,130 @@
+<% include layout/head %>   
+<% include layout/header %>   
+		
+			<div class="header">               
+			    <div class="container">
+			        <div class="logo">                                             
+			            <a href="/"><img id="logo-header" src="/images/design/logo2.png" alt="Logo"></a>
+			        </div>      
+			        <div class="navbar">                                
+			            <div class="navbar-inner">                                  
+			                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			                    <span class="icon-bar"></span>
+			                    <span class="icon-bar"></span>
+			                    <span class="icon-bar"></span>
+			                </a>                                
+			                <div class="nav-collapse collapse">                                     
+			                    <ul class="nav top-2">
+			                    	<li>
+			                            <a href="/" class="dropdown-toggle">Home</a>
+			                        </li>
+			                   		<% if (user && user.rights === 'Admin') { %>                        
+				                        <li>
+				                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Transaction
+				                                <b class="caret"></b>                            
+				                            </a>
+				                            <ul class="dropdown-menu">
+				                                <li><a href="">Add Medicine / Equipment</a></li>
+				                                <li><a href="">Confirm Request</a></li>
+				                            </ul>
+				                            <b class="caret-out"></b>                        
+				                        </li>
+				                        <li>
+				                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inventory
+				                                <b class="caret"></b>                            
+				                            </a>
+				                            <ul class="dropdown-menu">
+				                                <li><a href="">Medicine</a></li>
+				                                <li><a href="">Equipment</a></li>
+				                            </ul>
+				                            <b class="caret-out"></b>                        
+				                        </li>
+				                    <% } %>	
+			                        <li>
+			                        	
+			                        	<% if (!user) { %>
+			                        		<a href="/login" class="dropdown-toggle">
+											Log In
+										<% } else { %> 
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<%=user.fullname%>
+											<b class="caret"></b> 
+			                            <% } %>			                                                           
+			                            </a>
+			                            <ul class="dropdown-menu">
+			                            	<li><a href="">Edit Profile</a></li>
+			                                <li><a href="/logout">Log Out</a></li>
+			                            </ul>
+			                            <b class="caret-out"></b>                        
+			                        </li>
+			                        <li><a class="search"><i class="icon-search search-btn"></i></a></li>                               
+			                    </ul>
+			                    <div class="search-open">
+			                        <div class="input-append">
+			                            <form>
+			                                <input type="text" class="span3" placeholder="Search" />
+			                                <button type="submit" class="btn-u">Go</button>
+			                            </form>
+			                        </div>
+			                    </div>
+			                </div>                              
+			            </div>
+			        </div>                         
+			    </div>             
+			</div> 
+			<div class="breadcrumbs margin-bottom-40">
+		    	<div class="container">
+		            <h1 class="color-green pull-left">Add Inventory</h1>
+		            <ul class="pull-right breadcrumb">
+		                <li><a href="/">Transaction</a> <span class="divider">/</span></li>
+		                <li class="active">Add Medicine | Equipment</li>
+		            </ul>
+		        </div>
+		    </div>   
+			<div class="container" style="display: block; margin: 0px auto 105px;">
+				<form class="addinventory-page" method="post" accept-charset="utf-8">
+					<table class="table">
+		            	<tbody>
+							<tr>
+								<td>Medicine Name</td>
+								<td><input type="number" style="width: 250px; padding: 1px" value="0"></td>
+								<td>Quantity</td>
+								<td><input type="number" style="width: 45px; padding: 1px" value="0"></td>
+								<td>Large</td>
+								<td>
+								<input type="number" style="width: 45px; padding: 1px" value="0">
+								</td>
+								<td>Ultra</td>
+								<td>
+								<input type="number" style="width: 45px; padding: 1px" value="0">
+								</td>
+							</tr>
+						</tbody>
+					</table>	                
+		        </form>
+			    <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered table-hover" id="example">
+					<thead>
+						<tr>
+							<th>Name</th>							
+							<th>Birtdate</th>
+							<th>Added</th>
+							<th>Updated</th>
+							<th>Removed</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>						
+						<tr class="odd gradeX">
+							<td>Testing</td>
+							<td>testmin </td>
+							<td>added</td>
+							<td>adfdaf</td>
+							<td>dfasaf</td>
+							<td class="center">fdafasf</td>
+						</tr>					 					
+					</tbody>
+				</table>
+			</div>
+			<div class="push"></div>
+	    </div>
+	<% include layout/footer %>

@@ -1,0 +1,64 @@
+<% include layout/head %>   
+<% include layout/header %>  
+			<div class="breadcrumbs margin-bottom-40">
+		    	<div class="container">
+		            <h1 class="color-green pull-left">Add Medical Information</h1>
+		            <ul class="pull-right breadcrumb">
+		                <li><a href="/">Transaction</a> <span class="divider">/</span></li>
+		                <li class="active">Add Medicine Information</li>
+		            </ul>
+		        </div>
+		    </div>   
+			<div class="container" style="display: block; margin: 0px auto 105px;">
+				<div class="well span11">
+					<div class="row">
+						<div class="span3">
+							<form method="post" accept-charset="utf-8">
+								<label>Item Name</label>
+								<input class="span3" name="itemName" size="16" type="text">
+								<label>Category</label>
+								<select id="selCategory" name="selCategory" class="span3">
+									<option value="" selected>Choose One:</option>
+									<option value="Supplies" >Supplies</option>
+									<option value="Medicine">Medicine</option>
+									<option value="Equipment">Equipment</option>
+								</select>
+								<label>MIMS Classification</label>
+								<input class="span3" name="classification" size="16" type="text">
+								<label>Dosage / Weight</label>
+								<input class="span3" name="dos_weight" size="16" type="text">
+								<label>Additional Notes</label>
+								<textarea name="medInfo" id="medInfo" class="input-small span3" rows="7"></textarea>
+								<button type="submit" class="btn btn-success pull-right">Save</button>
+							</form>
+						</div>
+						<div class="span7 pull-right" style="border-left:1px solid #EBEBEB;width:750px;padding-left:24px;margin-left:0;">
+							<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered table-hover" id="medItem">
+							<thead>
+								<tr>
+									<th width="35%" style="text-align:center">Item Name</th>							
+									<th width="15%" style="text-align:center">Dosage/Weight</th>
+									<th width="10%" style="text-align:center">Category</th>
+									<th width="20%" style="text-align:center">MIMS Classification</th>
+									<th width="20%" style="text-align:center">Additional Notes</th>						
+								</tr>
+							</thead>
+							<tbody>
+								<% for(var i=0; i<medicine.length; i++) {%>
+									<tr class="odd gradeX">
+										<td><%=medicine[i].itemName%></td>
+										<td><%=medicine[i].dosage_weight%></td>
+										<td><%=medicine[i].category%></td>
+										<td><%=medicine[i].classification%></td>										
+										<td><%medicine[i].expired.length%></td>
+									</tr>
+								<% } %>
+							</tbody>
+						</table>
+						</div>											
+					</div>
+				</div>
+			</div>
+			<div class="push"></div>
+	    </div>
+	<% include layout/footer %>

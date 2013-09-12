@@ -1,0 +1,98 @@
+<% include layout/head %>   
+<% include layout/header %>   
+		
+			<div class="header">               
+			    <div class="container">
+			        <div class="logo">                                             
+			            <a href="/"><img id="logo-header" src="/images/design/logo2.png" alt="Logo"></a>
+			        </div>      
+			        <div class="navbar">                                
+			            <div class="navbar-inner">                                  
+			                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			                    <span class="icon-bar"></span>
+			                    <span class="icon-bar"></span>
+			                    <span class="icon-bar"></span>
+			                </a>                                
+			                <div class="nav-collapse collapse">                                     
+			                    <ul class="nav top-2">
+			                    	<li>
+			                            <a href="/" class="dropdown-toggle">Home</a>
+			                        </li>
+			                   		<% if (user && user.rights === 'Admin') { %>                        
+				                        <li>
+				                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Transaction
+				                                <b class="caret"></b>                            
+				                            </a>
+				                            <ul class="dropdown-menu">
+				                                <li><a href="">Add Medicine / Equipment</a></li>
+				                                <li><a href="">Confirm Request</a></li>
+				                            </ul>
+				                            <b class="caret-out"></b>                        
+				                        </li>
+				                        <li>
+				                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inventory
+				                                <b class="caret"></b>                            
+				                            </a>
+				                            <ul class="dropdown-menu">
+				                                <li><a href="">Medicine</a></li>
+				                                <li><a href="">Equipment</a></li>
+				                            </ul>
+				                            <b class="caret-out"></b>                        
+				                        </li>
+				                    <% } %>	
+			                        <li>
+			                        	
+			                        	<% if (!user) { %>
+			                        		<a href="/login" class="dropdown-toggle">
+											Log In
+										<% } else { %> 
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<%=user.fullname%>
+											<b class="caret"></b> 
+			                            <% } %>			                                                           
+			                            </a>
+			                            <ul class="dropdown-menu">
+			                            	<li><a href="">Edit Profile</a></li>
+			                                <li><a href="/logout">Log Out</a></li>
+			                            </ul>
+			                            <b class="caret-out"></b>                        
+			                        </li>
+			                        <li><a class="search"><i class="icon-search search-btn"></i></a></li>                               
+			                    </ul>
+			                    <div class="search-open">
+			                        <div class="input-append">
+			                            <form>
+			                                <input type="text" class="span3" placeholder="Search" />
+			                                <button type="submit" class="btn-u">Go</button>
+			                            </form>
+			                        </div>
+			                    </div>
+			                </div>                              
+			            </div>
+			        </div>                         
+			    </div>             
+			</div> 
+			<div class="breadcrumbs margin-bottom-40">
+		    	<div class="container">
+		            <h1 class="color-green pull-left">Announcement</h1>
+		            <ul class="pull-right breadcrumb">
+		                <li><a href="/">Home</a> <span class="divider">/</span></li>
+		                <li class="active">Announcement</li>
+		            </ul>
+		        </div>
+		    </div>   
+			<div class="container" style="display: block; margin: 0px auto 105px;">
+			    <div class="hero-unit">
+					<p>	The page your requested could not be found, either contact your webmaster or try again.
+					Use your browsers Back button to navigate to the page you have previously come from 
+					Or you could just press this button below:
+					<a href="/" class="btn btn-large btn-info" style="position:relative;clear:both;display:block;width:150px;margin:20px auto 0;"><i class="icon-home icon-white"></i> Take Me Home</a>
+					</p>
+				</div>
+				<% if (user && user.rights === 'Admin') { %>				
+					<% include admin/inventory %>
+				<% }%>
+			</div>
+			<div class="push"></div>
+	    </div>
+	<% include layout/footer %>

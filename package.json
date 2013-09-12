@@ -1,0 +1,25 @@
+{
+  "name": "MyMedicineInventory",
+  "description": "An inventory application for Medicine and Medical Equipment.",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "Alexjander Bacalso",
+    "email": "janderbacalso@gmail.com"
+  },
+  "scripts": {
+    "start": "supervisor app"
+  },
+  "dependencies": {
+    "express": ">= 0.0.0",
+    "ejs": ">= 0.0.0",
+    "passport": ">= 0.0.0",
+    "passport-local": ">= 0.0.0",
+    "connect-flash": "~0.1.0",
+    "view-helpers": "~0.1.2",
+    "express-namespace": "~0.1.1",
+    "mongoose": "~3.6.19",
+    "moment": "~2.1.0",
+    "async": "~0.2.9"
+  }
+}

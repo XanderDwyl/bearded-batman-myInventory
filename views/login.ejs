@@ -1,0 +1,98 @@
+<% include layout/head %>   
+	<body>
+		<div id="wrap">	
+			<div class="header">               
+			    <div class="container">
+			        <div class="logo">                                             
+			            <a href="/"><img id="logo-header" src="/images/design/logo2.png" alt="Logo"></a>
+			        </div>      
+			        <div class="navbar">                                
+			            <div class="navbar-inner">                                  
+			                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			                    <span class="icon-bar"></span>
+			                    <span class="icon-bar"></span>
+			                    <span class="icon-bar"></span>
+			                </a>                                
+			                <div class="nav-collapse collapse">                                     
+			                    <ul class="nav top-2">
+			                    	<li>
+			                            <a href="/" class="dropdown-toggle">Home</a>
+			                        </li>
+			                   		<% if (user && user.rights === 'Admin') { %>                        
+				                        <li>
+				                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Transaction
+				                                <b class="caret"></b>                            
+				                            </a>
+				                            <ul class="dropdown-menu">
+				                                <li><a href="">Add Medicine / Equipment</a></li>
+				                                <li><a href="">Confirm Request</a></li>
+				                            </ul>
+				                            <b class="caret-out"></b>                        
+				                        </li>
+				                        <li>
+				                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inventory
+				                                <b class="caret"></b>                            
+				                            </a>
+				                            <ul class="dropdown-menu">
+				                                <li><a href="">Medicine</a></li>
+				                                <li><a href="">Equipment</a></li>
+				                            </ul>
+				                            <b class="caret-out"></b>                        
+				                        </li>
+				                    <% } %>	
+			                        <li class="active">
+			                        	
+			                        	<% if (!user) { %>
+			                        		<a href="/login" class="dropdown-toggle">
+											Log In
+										<% } else { %> 
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<%=user.fullname%>
+											<b class="caret"></b> 
+			                            <% } %>			                                                           
+			                            </a>
+			                            <ul class="dropdown-menu">
+			                            	<li><a href="">Edit Profile</a></li>
+			                                <li><a href="/logout">Log Out</a></li>
+			                            </ul>
+			                            <b class="caret-out"></b>                        
+			                        </li>                               
+			                    </ul>			                    
+			                </div>                              
+			            </div>
+			        </div>                         
+			    </div>             
+			</div>
+			<div class="push" style="height:50px;"></div>	    	
+			<div class="container">
+				<form class="log-page" method="post" accept-charset="utf-8">
+					<legend>Login to your account</legend>
+					<% if (message) { %>					
+						<div class="alert alert-error alert-message">
+							<a class="close" data-dismiss="alert" href="#">&times;</a>
+							<%= message %>
+						</div>			
+					<% } %>   
+					<div class="input-prepend">
+					    <span class="add-on"><i class="icon-user"></i></span>
+					    <input class="input-xlarge" type="email" placeholder="Email Address" name="username">
+					</div>
+					<div class="input-prepend">
+					    <span class="add-on"><i class="icon-lock"></i></span>
+					    <input class="input-xlarge" type="password" placeholder="Password" name="password">
+					</div>
+					<div class="controls form-inline">
+					    <label class="checkbox"><!--//<input type="checkbox" /> Stay Signed in--></label>
+					    <button class="btn-u pull-right" type="submit">Login</button>
+					</div>
+					<hr />
+					
+					<div class="controls form-inline">
+					    <label class="checkbox" style="margin-top:-15px"><h4>Don't have account yet?<br/><small>If yes, press register button.</small></h4></label>
+					    <a href="/register"><button class="btn-u pull-right" type="button">Register</button></a>
+					</div>
+				</form>
+			</div>
+	    </div>
+
+<% include layout/footer %>
