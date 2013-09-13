@@ -2,14 +2,14 @@ var mongoose = require('mongoose'),
     Schema   = mongoose.Schema;
 
 var InventoryIn = new Schema({
-    itemName:   { type: String, required: true },
+    item:   { type: String, required: true },
     quantity:   { type: Number, required: true, default: 0 },
     userID:     { type: String, required: true },
     added:      { type: Date, default: Date.now},
     update:     { type: Date, default: ''}
 });
 var InventoryOut = new Schema({
-    itemName:   { type: String, required: true },
+    item:   { type: String, required: true },
     quantity:   { type: Number, required: true, default: 0 },
     userID:     { type: String, required: true },
     added:      { type: Date, default: Date.now},

@@ -17,6 +17,7 @@ exports.home = function (req, res) {
 }
 
 exports.login = function (req, res) {
+  if(req.isAuthenticated()) { return res.redirect('/') }
   res.render('login', { user : req.user, message: ''});
 }
 
@@ -117,10 +118,31 @@ exports.addItem = function (req, res){
   });  
 }
 exports.inventoryDisplay = function (req, res){  
-  med.find({},function(err, results){
-    if(err) res.render('404', { user: req.user });
-    res.render('addInventory', { user: req.user, medicine: results});
-  })  
+  async.waterfall(
+    [
+      function(callback) {
+        med.find().exec(function(err, results){
+          var populateSelectValue = {}
+          if(err) res.redirect('404');
+          if(err || results[0] === undefined) {
+            populateSelectValue._id = ''
+            populateSelectValue.itemName = ''
+          } else {
+            populateSelectValue = results
+          }
+          callback(null, populateSelectValue)
+        })
+      },         
+      function(populateSelectValue, callback) {
+        med.aggregate({'$unwind':'$inventoryIn'},
+          {'$group':{'_id':'$itemName','stockReceived':{$sum:'$inventoryIn.quantity'}}},
+          {'$sort':{'stockReceived':-1}},
+          function (err, results)
+          {
+            res.render('addInventory', { user: req.user, medicine: populateSelectValue, inventory: results});            
+          })
+      }
+  ]); 
 }
 exports.addingInventory = function (req, res){
   var inventoryIn = {};

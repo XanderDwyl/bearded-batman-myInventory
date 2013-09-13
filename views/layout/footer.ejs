@@ -63,7 +63,7 @@
 					$("select#itemName option:selected").each(function () {
 					str += $(this).text() + " ";
 					});
-					
+					if (str === 'Choose One: ') { str=""; }
 					$("#medInventory_filter > label > input").val(str);
 					
 					$('#medInventory').dataTable().fnFilter( str, null, 1,1)

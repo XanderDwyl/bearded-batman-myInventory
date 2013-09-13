@@ -15,9 +15,9 @@
 						<div class="span3">
 							<label>Item Name</label>
 							<select id="itemName" name="itemName" class="span3">
-								<option value="na" selected="">Choose One:</option>
+								<option value="na" selected>Choose One:</option>
 								<% for(var i=0; i<medicine.length; i++) {%>
-									<option value="<%=medicine[i]._id%>" selected=""><%=medicine[i].itemName%></option>
+									<option value="<%=medicine[i]._id%>"><%=medicine[i].itemName%></option>
 								<% } %>								
 							</select>
 							<label>Quantity</label>
@@ -38,13 +38,13 @@
 								</tr>
 							</thead>
 							<tbody>
-								<% for(var i=0; i<medicine.length; i++) {%>
+								<% for(var i=0; i<inventory.length; i++) {%>
 									<tr class="odd gradeX">
-										<td><%=medicine[i].itemName%></td>
-										<td><%=medicine[i].inventoryOut%></td>
-										<td><%=medicine[i].category%></td>
-										<td><%=medicine[i].classification%></td>										
-										<td><%medicine[i].expired.length%></td>
+										<td><%=inventory[i]._id%></td>
+										<td><%=inventory[i].stockReceived%></td>
+										<td></td>
+										<td></td>										
+										<td></td>
 									</tr>
 								<% } %>
 							</tbody>

@@ -12,7 +12,6 @@ module.exports = function (app, passport) {
 	app.post('/login', sessionController.handlelogin);
 	app.get('/register', sessionController.register);
 	app.post('/register', sessionController.registerNew);
-	// app.get('/list/users', authenticate.isAdminAuthenticated, sessionController.listofusers);
 	app.get('/confirm/request', authenticate.isAdminAuthenticated, sessionController.confirmRequest);	
 	app.get('/addItem', authenticate.isAdminAuthenticated, sessionController.itemDisplay);
 	app.post('/addItem', authenticate.isAdminAuthenticated, sessionController.addItem);
