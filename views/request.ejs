@@ -2,10 +2,10 @@
 <% include layout/header %>
 			<div class="breadcrumbs margin-bottom-40">
 		    	<div class="container">
-		            <h1 class="color-green pull-left">Add Inventory</h1>
+		            <h1 class="color-green pull-left">Request Form</h1>
 		            <ul class="pull-right breadcrumb">
 		                <li><a href="/">Transaction</a> <span class="divider">/</span></li>
-		                <li class="active">Medicine | Equipment </li>
+		                <li class="active">Request Form</li>
 		            </ul>
 		        </div>
 		    </div>   
@@ -16,9 +16,7 @@
 							<label>Item Name</label>
 							<select id="itemName" name="itemName" class="span3">
 								<option value="na" selected>Choose One:</option>
-								<% for(var i=0; i<medicine.length; i++) {%>
-									<option value="<%=medicine[i]._id%>"><%=medicine[i].itemName%></option>
-								<% } %>								
+																
 							</select>
 							<label>Quantity</label>
 							<input class="span3" name="qty" id="appendedInput3" size="16" type="text">
@@ -30,23 +28,15 @@
 							<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered table-hover" id="medInventory">
 							<thead>
 								<tr>
-									<th width="50%" style="text-align:center">Item Name</th>							
-									<th width="10%" style="text-align:center">Stock Received</th>
-									<th width="10%" style="text-align:center">Stock Used</th>
-									<th width="10%" style="text-align:center">Stock on Hand</th>
-									<th width="20%" style="text-align:center">Units</th>						
+									<th width="42%" style="text-align:center">Item Name</th>							
+									<th width="5%" style="text-align:center">Quantity</th>
+									<th width="12%" style="text-align:center">Date Requested</th>
+									<th width="12%" style="text-align:center">Date Received</th>
+									<th width="17%" style="text-align:center">Received By</th>						
 								</tr>
 							</thead>
 							<tbody>
-								<% for(var i=0; i<inventory.length; i++) {%>
-									<tr class="odd gradeX">
-										<td><%=inventory[i]._id%></td>
-										<td><%=inventory[i].stockReceived%></td>
-										<td><%=inventory[i].stockUsed%></td>
-										<td><%=inventory[i].stockReceived - inventory[i].stockUsed%></td>										
-										<td><%=inventory[i].unit[0]%></td>
-									</tr>
-								<% } %>
+								
 							</tbody>
 						</table>
 						</div>											

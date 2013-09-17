@@ -1,62 +1,62 @@
-_id,itemName,category,classification,dosage_weight,add_notes,added,update,expired,__v,inventoryOut,inventoryIn,status,userID
-1,Alcohol Swabs,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE,
-2,Antiseptic Hand cleaner,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE,
-3,Medical adhesive tape (Transpore),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE,
-4,Sterile gauze (4-inch squares)(McBride),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE,
-5,Gauze Bandage (McBride),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE,
-6,Triangular Bandage,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE,
-7,Terramycin (Triple Antibiotic),Meds,Topical Antibiotic,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE,
-8,Hydrocortisone Cream (1%),Meds,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE,
-9,Flashlight (small),Equipment,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE,
-10,BONAMINE,Meds,Anti-emetic/Anti-vertigo,25 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE,
-11,LIDOCAINE (Xylocaine 2%),Meds,,20 mg/ml,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE,
-12,Kremil S,Meds,"Antacid, Antireflux Agents and Antiulcerants",178 mg/233 mg/30 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE,
-13,Maalox,Meds,"Antacid, Antireflux Agents and Antiulcerants",200 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE,
-14,HNBB,Meds,Antispasmodics,10 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE,
-15,Hydrite (Sachet),Meds,Electrolytes,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE,
-16,Hydrite (Tablet),Meds,Electrolytes,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-17,DECOLGEN,Meds,Cough and Colds Preparation,10 mg/500 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-18,Alcohol,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-19,Elastic bandage (4x5),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-20,Hydrogen peroxide (500ml),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-21,Plastic non-latex gloves,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-22,ALLERTA,Meds,Antihistamine and Antiallergics,10 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-23,IMODIUM,Meds,Antidiarrheals,2 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-24,BIOGESIC,Meds,Analgesics (Non-Opiod) & Antipyretics,500 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-25,SINECOD FORTE,Meds,Cough and Colds Preparation,50 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-26,SOLMUX,Meds,Cough and Colds Preparation,500 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-27,DOLFENAL,Meds,,500 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-28,PLASIL,Meds,,10 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-29,CELECOXX,Meds,NSAIDs,200 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-30,NEOBLOC,Meds,,50 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-31,Betadine (120ml),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-32,Betadine (15ml),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-33,Cotton balls,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-34,White Flower,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-35,Digital Thermometer,Equipment,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-36,Automatic BP App (OMRON),Equipment,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-37,Salonpas,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-38,Omega,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-39,Efficascent Oil,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-40,Strepsils - Orange with Vitamin C,Meds,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-41,Strepsils - Soothing,Meds,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-42,Strepsils - Cool Sensation,Meds,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-43,Strepsils - Extra Strong,Meds,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-44,Neozep,Meds,"Cough, Colds and Flu Preparation",10 mg/2 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-45,BIOFLU,Meds,,10 mg/2 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-46,ADVIL,Meds,,200 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-47,ALAXAN FR,Meds,,200 mg/325 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-48,BAND-AID,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-49,EYE MO (MOISTURIZING),Supplies,,7.5 ml,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-50,EYE MO (RED EYES FORMULA),Supplies,,7.5 ml,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-51,KAMILOSAN,Supplies,,15 ml,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-52,MASK,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-53,AMOXICILLIN,Meds,,500 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-54,SINUTAB,Meds,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-55,Strepsils - Original,Meds,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-56,Hot Bag,Equipment,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-57,Cold Bag,Equipment,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-58,Salbutamol Nebule,Meds,,2.5 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-59,Nebulizer,Equipment,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-60,Weighing Scale,Equipment,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
-61,Salonpas (Gel),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],[string],TRUE
+_id,itemName,category,classification,dosage_weight,add_notes,added,update,expired,__v,inventory,status,userID,units
+1,Alcohol Swabs,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+2,Antiseptic Hand cleaner,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+3,Medical adhesive tape (Transpore),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+4,Sterile gauze (4-inch squares)(McBride),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+5,Gauze Bandage (McBride),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,pack
+6,Triangular Bandage,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+7,Terramycin (Triple Antibiotic),Meds,Topical Antibiotic,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,tube
+8,Hydrocortisone Cream (1%),Meds,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,tube
+9,Flashlight (small),Equipment,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+10,BONAMINE,Meds,Anti-emetic/Anti-vertigo,25 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+11,LIDOCAINE (Xylocaine 2%),Meds,,20 mg/ml,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,amp
+12,Kremil S,Meds,"Antacid, Antireflux Agents and Antiulcerants",178 mg/233 mg/30 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+13,Maalox,Meds,"Antacid, Antireflux Agents and Antiulcerants",200 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+14,HNBB,Meds,Antispasmodics,10 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+15,Hydrite (Sachet),Meds,Electrolytes,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,sachet
+16,Hydrite (Tablet),Meds,Electrolytes,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,tablets
+17,DECOLGEN,Meds,Cough and Colds Preparation,10 mg/500 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+18,Alcohol,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,bottle
+19,Elastic bandage (4x5),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+20,Hydrogen peroxide (500ml),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,bottle
+21,Plastic non-latex gloves,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,pack
+22,ALLERTA,Meds,Antihistamine and Antiallergics,10 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+23,IMODIUM,Meds,Antidiarrheals,2 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+24,BIOGESIC,Meds,Analgesics (Non-Opiod) & Antipyretics,500 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+25,SINECOD FORTE,Meds,Cough and Colds Preparation,50 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+26,SOLMUX,Meds,Cough and Colds Preparation,500 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+27,DOLFENAL,Meds,,500 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+28,PLASIL,Meds,,10 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+29,CELECOXX,Meds,NSAIDs,200 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+30,NEOBLOC,Meds,,50 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+31,Betadine (120ml),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,bottle
+32,Betadine (15ml),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,bottle
+33,Cotton balls,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,pack
+34,White Flower,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+35,Digital Thermometer,Equipment,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+36,Automatic BP App (OMRON),Equipment,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+37,Salonpas,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,patches
+38,Omega,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,bottle
+39,Efficascent Oil,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,bottle
+40,Strepsils - Orange with Vitamin C,Meds,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,lozenges
+41,Strepsils - Soothing,Meds,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,lozenges
+42,Strepsils - Cool Sensation,Meds,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,lozenges
+43,Strepsils - Extra Strong,Meds,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,lozenges
+44,Neozep,Meds,"Cough, Colds and Flu Preparation",10 mg/2 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,tablets
+45,BIOFLU,Meds,,10 mg/2 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,tablets
+46,ADVIL,Meds,,200 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,capsules
+47,ALAXAN FR,Meds,,200 mg/325 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,tablets
+48,BAND-AID,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,strips
+49,EYE MO (MOISTURIZING),Supplies,,7.5 ml,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+50,EYE MO (RED EYES FORMULA),Supplies,,7.5 ml,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+51,KAMILOSAN,Supplies,,15 ml,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,bottle
+52,MASK,Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+53,AMOXICILLIN,Meds,,500 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,tablets
+54,SINUTAB,Meds,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,tablets
+55,Strepsils - Original,Meds,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,lozenges
+56,Hot Bag,Equipment,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+57,Cold Bag,Equipment,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+58,Salbutamol Nebule,Meds,,2.5 mg,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,nebule
+59,Nebulizer,Equipment,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+60,Weighing Scale,Equipment,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,piece
+61,Salonpas (Gel),Supplies,,,,"ISODate(""2013-09-12T03:41:50.229Z"")",null,,0,[string],TRUE,,tube

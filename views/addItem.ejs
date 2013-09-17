@@ -27,8 +27,22 @@
 								<input class="span3" name="classification" size="16" type="text">
 								<label>Dosage / Weight</label>
 								<input class="span3" name="dos_weight" size="16" type="text">
+								<label>Units</label>
+								<select id="selUnits" name="selUnits" class="span3">
+									<option value="amp">amp</option>
+									<option value="bottle">bottle</option>
+									<option value="lozenges">lozenges</option>
+									<option value="nebule">nebule</option>
+									<option value="pack">pack</option>
+									<option value="patches">patches</option>
+									<option value="piece">piece</option>
+									<option value="sachet">sachet</option>
+									<option value="strips">strips</option>
+									<option value="tablets">tablets</option>
+									<option value="tube">tube</option>
+								</select>
 								<label>Additional Notes</label>
-								<textarea name="medInfo" id="medInfo" class="input-small span3" rows="7"></textarea>
+								<textarea name="medInfo" id="medInfo" class="input-small span3" rows="5"></textarea>
 								<button type="submit" class="btn btn-success pull-right">Save</button>
 							</form>
 						</div>
@@ -36,8 +50,9 @@
 							<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered table-hover" id="medItem">
 							<thead>
 								<tr>
-									<th width="35%" style="text-align:center">Item Name</th>							
-									<th width="15%" style="text-align:center">Dosage/Weight</th>
+									<th width="30%" style="text-align:center">Item Name</th>							
+									<th width="10%" style="text-align:center">Dosage/Weight</th>
+									<th width="10%" style="text-align:center">Units</th>
 									<th width="10%" style="text-align:center">Category</th>
 									<th width="20%" style="text-align:center">MIMS Classification</th>
 									<th width="20%" style="text-align:center">Additional Notes</th>						
@@ -48,6 +63,7 @@
 									<tr class="odd gradeX">
 										<td><%=medicine[i].itemName%></td>
 										<td><%=medicine[i].dosage_weight%></td>
+										<td><%=medicine[i].units%></td>
 										<td><%=medicine[i].category%></td>
 										<td><%=medicine[i].classification%></td>										
 										<td><%medicine[i].expired.length%></td>

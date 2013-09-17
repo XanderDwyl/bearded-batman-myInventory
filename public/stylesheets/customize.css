@@ -1936,3 +1936,8 @@ code 			   	{ font-size: 80%;			}
     background-color: #51a351;
     *background-color: #499249;
 }
+.nav-header {
+    background-color: #72C02C;
+    color: #FFFFFF;
+    text-shadow: 0 0;
+}

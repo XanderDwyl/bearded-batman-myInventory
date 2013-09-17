@@ -22,40 +22,65 @@
 				                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Transaction
 				                                <b class="caret"></b>                            
 				                            </a>
-				                            <ul class="dropdown-menu">
-				                                <li><a href="/addItem">Add Medicine Info</a></li>
+				                            <ul class="dropdown-menu">				                               
+				                                <li><a href="/add/inventory">Add Medicine Inventory</a></li>
+				                                <li><a href="/requestAdmin">Request Medicine (admin)</a></li>
+				                                <li class="nav-header">Release / Withdrawal</li>
 				                                <li><a href="/confirm/request">Confirm Request</a></li>
+					                            <li><a href="#">Withdraw Medicine</a></li>
 				                            </ul>
 				                            <b class="caret-out"></b>                        
 				                        </li>
 				                        <li>
-				                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inventory
+				                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setup
 				                                <b class="caret"></b>                            
 				                            </a>
 				                            <ul class="dropdown-menu">
-				                                <li><a href="/add/inventory">Medicine</a></li>
+				                            	<li class="nav-header">Inventory Setup</li>
+					                            <li><a href="/addItem">Medicine Info</a></li>
 				                            </ul>
 				                            <b class="caret-out"></b>                        
 				                        </li>
-				                    <% } %>	
-			                        <li>
-			                        	
-			                        	<% if (!user) { %>
-			                        		<a href="/login" class="dropdown-toggle">
+				                        <li>
+				                    		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+												<%=user.fullname%>
+												<b class="caret"></b>
+											</a>
+											<ul class="dropdown-menu">
+				                            	<li><a href="">Edit Profile</a></li>
+				                                <li><a href="/logout">Log Out</a></li>
+				                            </ul>
+				                            <b class="caret-out"></b>   
+										</li>										
+				                    <% } else if (user && user.rights === 'user') { %>
+				                    	<li>
+				                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Transaction
+				                                <b class="caret"></b>                            
+				                            </a>
+				                            <ul class="dropdown-menu">
+				                                <li><a href="/request">Request Medicine</a></li>
+				                            </ul>
+				                            <b class="caret-out"></b>                        
+				                        </li>
+				                    	<li>
+				                    		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+												<%=user.fullname%>
+												<b class="caret"></b>
+											</a>
+											<ul class="dropdown-menu">
+				                            	<li><a href="">Edit Profile</a></li>
+				                                <li><a href="/logout">Log Out</a></li>
+				                            </ul>
+				                            <b class="caret-out"></b>   
+										</li>
+				                    <% } else { %>
+				                    	<li>
+				                    		<a href="/login" class="dropdown-toggle">
 											Log In
-										<% } else { %> 
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-											<%=user.fullname%>
-											<b class="caret"></b> 
-			                            <% } %>			                                                           
-			                            </a>
-			                            <ul class="dropdown-menu">
-			                            	<li><a href="">Edit Profile</a></li>
-			                                <li><a href="/logout">Log Out</a></li>
-			                            </ul>
-			                            <b class="caret-out"></b>                        
-			                        </li>
-			                        <li><a class="search"><i class="icon-search search-btn"></i></a></li>                               
+											</a>
+										</li>
+				                    <% } %>
+			                        <li><a class="search"><i class="icon-search search-btn"></i></a></li>
 			                    </ul>
 			                    <div class="search-open">
 			                        <div class="input-append">
@@ -69,5 +94,5 @@
 			            </div>
 			        </div>                         
 			    </div>             
-			</div> 
+			</div>
 

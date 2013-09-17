@@ -92,6 +92,7 @@ exports.addItem = function (req, res){
   medicine.add_notes        = req.body['medInfo'];
   medicine.update           = '';
   medicine.userID           = req.user._id;
+  medicine.units            = req.body['selUnits'];
   medicine.status           = 1;
 
   async.waterfall(
@@ -104,6 +105,7 @@ exports.addItem = function (req, res){
         }) 
       },         
       function(currentID, callback) {
+        console.log(currentID);
         medicine._id = currentID + 1
         medicine.save(function(err) {
             if (err) throw err; 
@@ -134,23 +136,26 @@ exports.inventoryDisplay = function (req, res){
         })
       },         
       function(populateSelectValue, callback) {
-        med.aggregate({'$unwind':'$inventoryIn'},
-          {'$group':{'_id':'$itemName','stockReceived':{$sum:'$inventoryIn.quantity'}}},
-          {'$sort':{'stockReceived':-1}},
+        med.aggregate({'$unwind':'$inventory'},
+          {'$group':{'_id':'$itemName','stockReceived':{$sum:'$inventory.qtyIn'}, 'stockUsed':{$sum:'$inventory.qtyOut'}, 'unit':{$push:'$units'}}},
+          {'$sort':{'stockReceived':-1}},       
           function (err, results)
           {
+            console.log("error: ", err);
+            if(results === undefined) {   results={}   }
+            console.log(results);
             res.render('addInventory', { user: req.user, medicine: populateSelectValue, inventory: results});            
           })
       }
   ]); 
 }
 exports.addingInventory = function (req, res){
-  var inventoryIn = {};
-  inventoryIn.itemName = req.body['itemName']
-  inventoryIn.quantity = req.body['qty'];
-  inventoryIn.userID   = req.user._id;
+  var Inventory = {};
+  Inventory.qtyIn    = req.body['qty'];  
+  Inventory.userID   = req.user._id;
+  Inventory.addedBy  = req.user.fullname;
 
-  med.update({_id:req.body['itemName']},{ $push: { inventoryIn: inventoryIn } }, function (err) {
+  med.update({_id:req.body['itemName']},{ $push: { inventory: Inventory } }, function (err) {
     if(err) {
       console.log("Item Name not found!");
       res.redirect('addItem');
@@ -158,6 +163,25 @@ exports.addingInventory = function (req, res){
     res.redirect('/add/inventory');      
   });
 }
+exports.addRequest = function (req, res){
+  console.log(req.user)
+  res.render('request', { user: req.user });
+}
+exports.requestInventory = function (req, res){
+  var Inventory = {};
+  Inventory.qtyOut   = req.body['qty'];  
+  Inventory.userID   = req.user._id;
+  Inventory.addedBy  = req.user.fullname;
+
+  med.update({_id:req.body['itemName']},{ $push: { inventory: Inventory } }, function (err) {
+    if(err) {
+      console.log("Item Name not found!");
+      res.redirect('addItem');
+    } 
+    res.redirect('/add/inventory');      
+  });
+}
+
 exports.confirmRequest = function (req, res){
   res.render('approvedRequest', { user: req.user });
 }
